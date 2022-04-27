@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./assets/styles/dist.css">
+	<link rel="stylesheet" href="./assets/styles/main.css">
+	<link rel="shortcut icon" href="./assets/images/saketa_logo_icon.png" type="image/x-icon">
+	<title>Employee Directory</title>
+</head>
+
+<body>
+	<header class="flex gap-8 p-4 border-b border-slate-300">
+		<img class="object-scale-down" src="./assets/images/saketa_logo_inverted.png" alt="Saketa Logo">
+		<div class="flex flex-col">
+			<h3 class="text-blue-400 text-3xl font-light">Employee Directory</h3>
+			<p class="capitalize text-lg font-light">The ultimate people directory experience</p>
+		</div>
+		<div class="flex gap-1 items-end ml-auto">
+			<span class="flex font-light text-2xl gap-1">
+				<span class="text-blue-400">Welcome,</span> Andrew Philips
+			</span>
+			<img class="max-w-[4rem]" src="./assets/images/profile.jpeg" alt="Profile Image">
+		</div>
+	</header>
+	<section class="flex justify-between">
+		<div class="flex flex-col p-8 gap-8" id="filter-list">
+			<div class="filter flex flex-col">
+				<span class="font-bold mb-2">Departments</span>
+				<ul class="pl-1">
+					<li>IT<span>(21)</span></li>
+					<li>Human Resources<span>(2)</span></li>
+					<li>MD<span>(1)</span></li>
+					<li>Sales<span>(4)</span></li>
+				</ul>
+			</div>
+			<div class="filter flex flex-col">
+				<span class="font-bold mb-2">Offices</span>
+				<ul class="pl-1">
+					<li>Seattle<span>(1)</span></li>
+					<li>India<span>(1)</span></li>
+				</ul>
+			</div>
+			<div class="filter flex flex-col">
+				<span class="font-bold mb-2">Job Titles</span>
+				<ul class="pl-1">
+					<li>SharePoint Practice Head<span>(1)</span></li>
+					<li>.NET Development Lead<span>(1)</span></li>
+					<li>Recruiting Expert<span>(1)</span></li>
+					<li>BI Developer<span>(1)</span></li>
+					<li>Business Analyst<span>(1)</span></li>
+				</ul>
+				<a class="text-xs pl-2 mt-2 text-blue-400" href="#">View more&hellip;</a>
+			</div>
+		</div>
+		<div class="flex flex-col py-8 px-4 w-full" id="result-search-container">
+			<div class="flex flex-col gap-6" id="search-wrapper">
+				<div class="grid grid-flow-col auto-cols-fr justify-center align-middle content-center gap-1 text-white"
+					id="alphabet-array">
+				</div>
+				<div class="flex gap-4">
+					<form class="flex gap-4 items-center content-center" id="search-form">
+						<label for="search" class="p-1">Search</label>
+						<div class="flex relative">
+							<div class="flex absolute text-slate-400 inset-y-0 left-0 items-center pl-2">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+									stroke="currentColor" stroke-width="2">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+								</svg>
+							</div>
+							<input type="search" name="search"
+								class="border border-slate-400 pl-8 pr-2 py-2 align-middle rounded-sm" id="employee-search">
+						</div>
+						<input type="button" value="Clear" class="bg-lime-500 py-2 px-6 text-white rounded-sm cursor-pointer">
+					</form>
+					<form class="flex items-center gap-4" id="filter-form">
+						<label for="filter-dropdown font-bold">Filter by</label>
+						<select name="filter-dropdown" id="employee-filter-dropdown"
+							class="pl-4 py-2 bg-transparent border border-slate-400">
+							<option value="prefername">Preferred Name</option>
+							<option value="blabla">Bla Bla</option>
+						</select>
+					</form>
+					<input type="button" value="Add Employee" class="bg-blue-400 px-4 py-2 text-white ml-auto">
+				</div>
+			</div>
+			<div class="grid grid-cols-4 auto-rows-max border border-slate-400 min-w-full min-h-full mt-4" id="results-container">
+			</div>
+		</div>
+	</section>
+</body>
+<script src="./assets/scripts/index.js"></script>
+</html>
